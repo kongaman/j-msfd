@@ -5,10 +5,16 @@ public class StockItem implements Comparable<StockItem>{
 	private double price;
 	private int quantityInStock = 0; // can be initialized here
 	
-	public StockItem(String name, double price, int quantity) {
+	public StockItem(String name, double price) {
 		this.name = name;
 		this.price = price;
 		this.quantityInStock = 0; // or here (you wouldn't do both normally, personal preference)
+	}
+	
+	public StockItem(String name, double price, int quantityInStock) {
+		this.name = name;
+		this.price = price;
+		this.quantityInStock = quantityInStock;
 	}
 
 	public String getName() {
@@ -19,7 +25,7 @@ public class StockItem implements Comparable<StockItem>{
 		return price;
 	}
 
-	public int getQuantity() {
+	public int quantityInStock() {
 		return quantityInStock;
 	}
 
